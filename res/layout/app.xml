@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<activity xmlns:binding="http://www.gueei.com/android-binding/">
+        <actionBar/>
+        <rootView
+            binding:dataSource="."
+            binding:layoutId="@layout/login"/>
+</activity>

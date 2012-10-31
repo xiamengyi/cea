@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://www.gueei.com/android-binding/"
+    android:layout_width="fill_parent"
+    android:background="@color/bg_color"
+    android:layout_height="fill_parent"
+    >
+
+      <TextView
+	   		android:gravity="center_horizontal|center_vertical"	
+      		style = "@style/topBanner"
+	    	android:paddingRight="0sp"
+	    	android:paddingLeft="0sp"
+	    	android:id="@+id/banner"
+	   />
+
+      <TextView
+			android:id="@+id/taskNumber"
+			android:layout_below="@id/banner"
+			android:textColor="@color/red"			
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background = "#F7E9A3"
+			android:padding="5sp"
+			android:gravity="center_vertical|center_horizontal"
+			android:textSize="14sp"	
+		/>
+      
+
+    <Button
+        android:id="@+id/sign_in"
+        android:layout_below="@+id/taskNumber"
+
+        android:text="@string/sign_in"
+        style="@style/ButtonText"
+        android:background="@drawable/btn_nice"
+        binding:onClick="SignIn" />
+
+        <Button
+    	android:id="@+id/shoplist"
+        android:layout_below="@id/sign_in"
+        android:text="@string/content_shoplist"
+        style="@style/ButtonText"
+        android:background="@drawable/btn_nice"
+        binding:onClick="ShopList" />
+            
+        <Button
+    	android:id="@+id/sign_leave"
+    	android:layout_below="@id/shoplist"
+        android:text="@string/sign_leave"
+        style="@style/ButtonText"
+        android:background="@drawable/btn_nice" 
+        binding:onClick="SignOut"/>
+        
+      <TextView
+		android:id="@+id/bmapShopAddress"
+		android:textColor="@color/text_color"
+		android:layout_alignParentBottom="true"
+		android:layout_width="match_parent" 
+		android:layout_height="wrap_content"
+		android:gravity="center_horizontal"
+		android:textSize="14sp"	
+		android:text="正在定位中，请稍后..."
+	    />      
+</RelativeLayout>

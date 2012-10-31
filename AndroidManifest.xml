@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lenovo_city.www"
+    android:versionCode="22"
+    android:versionName="4.0" >
+    <uses-sdk android:minSdkVersion="8" 
+        	  android:targetSdkVersion="16"	/>
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.CAMERA"></uses-permission>
+	
+	<uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+    
+    <application
+        android:icon="@drawable/icon"
+        android:label="@string/app_name" 
+        android:name=".app.BindingApp"
+        android:theme="@android:style/Theme.Black.NoTitleBar">
+        <activity
+            android:name=".ui.LoginActivity"
+            android:screenOrientation="portrait"
+			android:configChanges="orientation"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity 
+            android:name=".ui.MainActivity"
+            android:screenOrientation="portrait"
+			android:configChanges="orientation"
+            android:label="@string/app_name" >           
+        </activity>
+        
+        <activity 
+            android:name=".ui.TabWidgetActivity"
+            android:screenOrientation="portrait"
+			android:configChanges="orientation"
+            android:label="@string/app_name" >           
+        </activity>
+        
+        <activity 
+            android:name=".ui.ShopListActivity"
+            android:screenOrientation="portrait"
+			android:configChanges="orientation"
+            android:label="@string/app_name" >           
+        </activity>
+        
+        <activity 
+            android:name=".ui.ShopMapActivity"
+            android:screenOrientation="portrait"
+			android:configChanges="orientation"
+            android:label="@string/app_name" >           
+        </activity>
+                
+        <activity 
+            android:name=".ui.TaskListActivity"
+            android:screenOrientation="portrait"
+			android:configChanges="orientation"
+            android:label="@string/app_name" >           
+        </activity>
+        
+        <activity 
+            android:name=".ui.DoTaskActivity"
+            android:screenOrientation="portrait"
+			android:configChanges="orientation"
+            android:label="@string/app_name" >           
+        </activity>
+         
+        <activity 
+            android:name=".ui.UploadTaskActivity"
+            android:screenOrientation="portrait"
+			android:configChanges="orientation"
+            android:label="@string/app_name" >           
+        </activity>
+        
+        <activity 
+            android:name=".util.TimeoutActivity"
+            android:screenOrientation="portrait"
+			android:configChanges="orientation"
+			android:theme="@android:style/Theme.Dialog"
+            android:label="@string/app_name" >           
+        </activity>
+        
+        <service
+          android:enabled="true"
+          android:exported="false"
+          android:name=".service.UploadService"/>
+        
+        <service
+          android:enabled="true"
+          android:exported="false"
+          android:name=".function.Sign"/>
+        
+        <service
+          android:enabled="true"
+          android:exported="false"
+          android:name=".function.Login"/>
+        
+    </application>
+
+</manifest>

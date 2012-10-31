@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://www.gueei.com/android-binding/"
+    android:layout_width="fill_parent"
+    android:background="@color/bg_color"
+    android:layout_height="fill_parent"
+    >
+
+      <TextView
+	   		android:gravity="center_horizontal|center_vertical"	
+      		style = "@style/topBanner"
+	    	android:paddingRight="0sp"
+	    	android:paddingLeft="0sp"
+	    	android:id="@+id/banner"
+	   />
+
+    <TableLayout
+        android:layout_width="260sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/banner"
+        android:layout_centerInParent="true"
+        android:id="@+id/form"
+        android:stretchColumns="*" >
+
+
+       <TableRow android:layout_marginTop="20sp" >
+
+            <TextView
+                android:id="@+id/logInUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/imei"
+                android:textColor="@color/text_color"
+                android:textSize="16sp" />
+            
+            <TextView
+                android:id="@+id/iemi"
+                android:layout_width="20sp"
+                android:layout_height="wrap_content"
+                android:text="@string/imei"
+                android:textColor="@color/text_color"
+                android:textSize="16sp" 
+                android:ellipsize="marquee"  
+			    android:singleLine="true" 
+			    android:focusable="true"
+			    android:marqueeRepeatLimit="marquee_forever"
+			    android:focusableInTouchMode="true" 
+                />
+        </TableRow>
+
+        <TableRow android:layout_marginTop="30sp" >
+
+            <TextView
+                android:id="@+id/logInPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/password"
+                android:textColor="@color/text_color"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/logInEditPassword"
+                android:layout_width="180sp"
+                android:layout_height="wrap_content"
+                android:text=""
+                binding:text="password"
+                android:inputType="textPassword" 
+                >
+
+                <requestFocus />
+            </EditText>
+        </TableRow>
+        
+        <TableRow android:layout_marginTop="5sp">
+            <TextView />
+            <CheckBox 
+                android:id="@+id/rememberInfo" 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/remeber_info"
+                binding:checked="remember_password"/>
+        </TableRow>
+    </TableLayout>
+
+    <Button
+    	android:id="@+id/loginButton"
+        android:layout_below="@id/form"
+        android:layout_width="260sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
+        android:text="@string/login"
+        android:layout_centerInParent="true"
+        android:textSize="18sp" 
+        binding:onClick="Login"/>
+        
+        <ImageView 
+        	android:src="@drawable/logo"
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@string/city"
+            android:layout_marginBottom="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_alignParentBottom="true"/>
+	
+	
+</RelativeLayout>
