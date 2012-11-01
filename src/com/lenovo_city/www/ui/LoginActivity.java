@@ -4,8 +4,8 @@ import com.lenovo_city.www.R;
 import com.lenovo_city.www.model.LoginModel;
 import com.lenovo_city.www.share.AppConfig;
 import com.lenovo_city.www.util.MyResultReceiver;
-import com.lenovo_city.www.util.PhoneInformation;
 import com.lenovo_city.www.util.MyResultReceiver.Receiver;
+import com.lenovo_city.www.util.PhoneUtil;
 
 import gueei.binding.app.BindingActivity;
 import android.content.Context;
@@ -30,14 +30,10 @@ public class LoginActivity extends BindingActivity implements Receiver{
         mReceiver.setReceiver(this);
         
 		mPreferences = getSharedPreferences(AppConfig.TAG, Context.MODE_PRIVATE);
-	    l_model = new LoginModel(this,getIMEI(), mReceiver); 
+	    l_model = new LoginModel(this,PhoneUtil.getIMEI(this), mReceiver);  
 	    this.setAndBindRootView(R.layout.login, l_model);
     }  
-    
-    protected String getIMEI(){
-    	PhoneInformation pi = new PhoneInformation(this);
-    	return pi.getIMEI();    	
-    }
+
 
 	protected void rememberPassword(){
 		Editor editor = mPreferences.edit();

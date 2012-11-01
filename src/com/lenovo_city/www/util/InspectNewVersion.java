@@ -40,7 +40,7 @@ public class InspectNewVersion {
 		
 		@Override
 		protected String doInBackground(String... params) {
-			PhoneInformation sd = new PhoneInformation(context.getApplicationContext());
+			PhoneStatus sd = new PhoneStatus(context.getApplicationContext());
 			if(sd.isOnline()){
 			     try {
 			    	 URL url = new URL(AppConfig.VERSION_PATH);
@@ -99,7 +99,7 @@ public class InspectNewVersion {
 	        .setPositiveButton(context.getResources().getString(R.string.dialog_Update_Straightway), new DialogInterface.OnClickListener() {
 				@Override
 				public void onClick(DialogInterface dialog, int which) {
-					PhoneInformation sd = new PhoneInformation(context.getApplicationContext());
+					PhoneStatus sd = new PhoneStatus(context.getApplicationContext());
 					if(sd.isOnline()&&sd.isSDCardAvailable()){
 						DownloadNewApk dna = new DownloadNewApk(context);
 						dna.startDownloadApkToSDcardAsyTask();
