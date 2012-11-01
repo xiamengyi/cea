@@ -25,7 +25,7 @@ public class PhoneInformation {
 	public PhoneInformation(Context context){
 		this.context = context;
 	}
-	
+    
 	public boolean isOnline() {
         ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         Boolean InternetStatus = cm.getActiveNetworkInfo() != null && cm.getActiveNetworkInfo().isConnectedOrConnecting();

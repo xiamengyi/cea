@@ -44,8 +44,7 @@ public class MainActivity extends BindingActivity implements Receiver {
 			Toast.makeText(this, new Boolean(resultData.getBoolean("success")).toString(), Toast.LENGTH_LONG).show();
 			break;
 		}
-	}
-	
+	}	
 }
 
 

@@ -16,8 +16,8 @@ public class Sign extends IntentService{
 	public final int SIGN_OUT = 2;
 	public final int ERROR = 3;
 	
-	public Sign(String name) {
-		super(name);
+	public Sign() {
+		super("Sign");
 	}
 
 	@Override
